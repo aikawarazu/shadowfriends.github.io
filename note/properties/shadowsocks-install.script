@@ -1,0 +1,18 @@
+apt-get install shadowsocks
+vi /etc/shadowsocks/config.json
+:
+ {
+    "server":"my_server_ip",
+    "server_port":2333,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"mymymymy",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false,
+    "workers": 1
+}
+
+ 
+/etc/init.d/shadowsocks start
+nohup ssserver -c /etc/shadowsocks.json > log &
