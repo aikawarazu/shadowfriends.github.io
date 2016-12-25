@@ -19,3 +19,4 @@ vi /etc/shadowsocks/config.json
 mkdir ~/logs
 cd ~/logs
 nohup ssserver -c /etc/shadowsocks/config.json > shadowsocks.log &
+# http://www.jianshu.com/p/4c7f8f23c111
