@@ -2,7 +2,7 @@ apt-get install shadowsocks
 vi /etc/shadowsocks/config.json
 :
  {
-    "server":"my_server_ip",
+    "server":"my_server_ip",  # my_server_ip
     "server_port":2333,
     "local_address": "127.0.0.1",
     "local_port":1080,
@@ -14,5 +14,8 @@ vi /etc/shadowsocks/config.json
 }
 
  
-/etc/init.d/shadowsocks start
-nohup ssserver -c /etc/shadowsocks.json > log &
+# /etc/init.d/shadowsocks start
+
+mkdir ~/logs
+cd ~/logs
+nohup ssserver -c /etc/shadowsocks/config.json > shadowsocks.log &
