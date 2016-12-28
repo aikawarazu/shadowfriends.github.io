@@ -49,11 +49,11 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	</build>
 </project>
 
-### 1、启动：SampleController.java
+###### 启动：SampleController.java
 使用编写一个main方法，实现：
 SpringApplication.run(SampleController.class, args);
 
-### 2、编写controller类：
+###### 2、编写controller类：
 @Controller
 public class HelloSpringBoot {
     @ResponseBody
@@ -63,7 +63,7 @@ public class HelloSpringBoot {
     }
 }
 
-### 3、运行SampleController.main方法
+###### 3、运行SampleController.main方法
 	运行方式：
 	1、直接运行
 	2、项目目录下，使用 mvn spring-boot:run
