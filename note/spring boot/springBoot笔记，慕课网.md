@@ -72,4 +72,6 @@ SpringBoot慕课网学习
 	
 1、配置
 -----------------------	
-	
+##### 在main/resource/下面，application.properties文件中加入配置：
+		server.port=8081
+		server.context-path=/whataaa
