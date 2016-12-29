@@ -113,3 +113,8 @@ SpringBoot慕课网学习
 
 #### 配置总结：1、使用yml控制多环境		2、使用ConfigurationProperties配置值
 
+2、controller
+------------------------------
+##### RestController和GetMapping：
+	RestController 相当于 Controller+ResponseBody
+	GetMapping 相当于 RequestMapping 中限定method=get
