@@ -72,6 +72,44 @@ SpringBoot慕课网学习
 	
 1、配置
 -----------------------	
-##### 在main/resource/下面，application.properties文件中加入配置：
+##### 方式一:properties 配置
+		在main/resource/下面，application.properties文件中加入配置：
 		server.port=8081
 		server.context-path=/whataaa
+		这样，访问http://localhost:8081/whataaa/hello就可以了。
+		
+##### 方式二:yml 配置
+		创建如下几个配置文件：
+> 	application-dev.yml
+> 	application-product.yml
+> 	application.yml
+
+		application-product、application-product配置文件内容如下：
+>>  	server:
+>>      port: 8081
+>>      context-path: /whataaa
+>>  base:
+>>      address: 192.168.1.47 
+>>      username: hao.fu
+>>      password: 123456
+>>      content: "${base.address}"
+>> 
+		application.yml内容如下：
+>>  		spring:
+>>      profiles:
+>>        active: product
+
+		创建配置类，使用注解：ConfigurationProperties，注意prefix属性
+
+		@Component
+		@ConfigurationProperties(prefix="# base #")
+		public class DataBaseConfig {
+			String address; 
+			String username;
+			String password;
+			String content;
+			...
+		}
+
+#### 配置总结：1、使用yml控制多环境		2、使用ConfigurationProperties配置值
+
