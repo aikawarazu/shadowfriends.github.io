@@ -102,7 +102,7 @@ SpringBoot慕课网学习
 		创建配置类，使用注解：ConfigurationProperties，注意prefix属性
 
 		@Component
-		@ConfigurationProperties(prefix="# base #")
+		@ConfigurationProperties(prefix="base")
 		public class DataBaseConfig {
 			String address; 
 			String username;
