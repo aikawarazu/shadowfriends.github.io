@@ -1,0 +1,6 @@
+ # 无法转发到jsp。
+   尝试的方法：
+   已经配置  mvc:
+    view:
+      prefix: /pages/jsp/
+      suffix: .jsp
